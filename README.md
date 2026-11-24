@@ -1,4 +1,4 @@
-# Central Park Plot Finder (first build)
+# Central Park Plot Finder (v2)
 
 A static web page: satellite map + transparent master plan overlay + forgiving plot search + 360° hotspots that open the 3DVista tour. No server code, no API keys, no paid map.
 
@@ -22,7 +22,17 @@ Then open http://localhost:8000. To put it on the client's site, upload the whol
 | `overlay/` | Master plan rendered from `CPHS MAP.pdf` with a transparent background, cut into 16 tiles. |
 | `data/plots.json` | 14,895 plots pulled from the CAD PDF text: block, plot label, number, sub-number (51/1), position, label angle, residential/commercial. |
 | `data/georef.json` | How the plan sits on the earth (see Alignment). |
-| `data/panoramas.json` | 360° points. Currently 61 test points along main roads. |
+| `data/panoramas.json` | 27 360° points from the existing 3DVista tour (positions read from the tour's own map). |
+| `data/outline.json` | Outline of the scheme traced from the plan (used by the Focus view). |
+| `data/roads.json` | Ferozepur Road (OpenStreetMap) and Hunza Road (traced from the plan) for the road highlight. |
+
+## Views and controls
+
+- **Satellite**: the plan sits on the satellite at 80% opacity (slider in Layers).
+- **Master plan**: the whole plan as one opaque sheet on the satellite, like Zameen's map view.
+- **Focus**: satellite and plan, with everything outside Central Park (Al Haram Garden and neighbouring societies) washed out.
+- Speech-bubble button: landmark callouts on/off. **2D/3D** button: flat or tilted view. Home: back to the start view.
+- Start view: standing on Ferozepur Road looking into the scheme (`START` at the top of the start-view section in `js/app.js`). Any view can be linked with `?view=lng,lat,zoom,bearing,pitch`; `index.html?calibrate` shows the current values. `?mode=plan` or `?mode=focus` opens in that view.
 
 ## Alignment (making the plan sit exactly on the satellite)
 
@@ -57,15 +67,16 @@ Each entry in `data/panoramas.json`:
 ```
 
 - Position: `lngLat` (from the camera GPS, or from the 3DVista map) or `plan` `[x, y]` in master plan units if it was placed on the plan.
-- `tour.media`: the panorama number in the 3DVista playlist. The page opens `tour/index.htm#media=17` in a full-screen viewer (the URL pattern is in `tour.deepLink` at the top of the file and can be changed).
-- Put the published 3DVista tour in a `tour/` folder next to `index.html` (or set `tour.url` to its web address).
-- Delete the `placeholder` test points once real ones exist.
+- `tour.name`: the panorama name in 3DVista. The page opens `{tour.url}#media-name=NAME` in a full-screen viewer (3DVista supports this deep link). `tour.media` (playlist number) also works.
+- `tour.url` points at the published tour in `CPHS Published File_V2/` next to `index.html`. To use the hosted copy instead, set it to `tour.liveUrl`.
+- The 27 current points were read from the tour's map (PanoramaMapLocation) and converted to plan units with a fit on 4 roundabouts (about 2–5 m). Two panoramas share the name "D Block Commercial Central Avenue", so the second one opens the first; rename one in 3DVista to fix it.
+- Old test points are only shown with `?test`.
 
 Fastest way to fill this in: shoot with GPS on (most 360 cameras and phones record it), then a script reads the GPS from each panorama file and writes this JSON. The 3DVista map's own hotspot positions can also be read from the published tour's `script.js`.
 
 ## Known data issues to check
 
-- Plots were assigned to blocks automatically by following the number sequences on the plan. 355 of 14,519 block+number pairs appear more than once, mostly in Blocks A, B, D and G. The page warns when a searched plot is one of these. A block-boundary drawing (or the CAD DWG with block layers) would fix this.
+- Plots were assigned to blocks automatically by following the number sequences on the plan, then refined so no block repeats a number. 4 residential numbers still appear twice (A-207, A-1152, E-41, E-419); the page warns on these. Stray numbers inside non-plot areas (e.g. a "1" inside the hospital) are removed. Commercial strips have their own numbering and are labelled "Commercial".
 - Three areas along the 120 ft Road have no block name on the plan (shown as "Unlabelled area 1/2/3"), and one area near Hunza Road is guessed as Block K from a single "13K" label.
 - Plot size (marla) isn't in the plan text for most plots. A plot list (Excel) with size, status and price would add it.
 

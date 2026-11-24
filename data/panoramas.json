@@ -1,865 +1,362 @@
 {
- "version": 1,
+ "note": "360 points from the Central Park 3DVista tour. Positions read from the tour's own map (PanoramaMapLocation) and converted to master-plan units. tour.name is the panorama name in 3DVista; the viewer opens {url}#media-name={name}. tour.url is the local copy of the published tour next to index.html; liveUrl is the hosted copy.",
  "tour": {
   "engine": "3dvista",
-  "url": "tour/index.htm",
-  "deepLink": "{url}#media={media}"
+  "url": "CPHS Published File_V2/index.htm",
+  "deepLink": "{url}#media-name={name}",
+  "liveUrl": "https://tours.panoraproperties.com/Central-Park-Tour/index.htm"
  },
- "help": "Each panorama needs a position: either \"lngLat\":[lng,lat] (from GPS / 3DVista map) or \"plan\":[x,y] (master-plan units). tour.media is the 3DVista media number or name to open. heading = compass bearing (deg) the panorama faces at yaw 0, used for the view cone.",
  "panoramas": [
   {
-   "id": "test_001",
-   "title": "150 ft Road \u00b7 point 1",
+   "id": "tour_d_block_3_0",
+   "title": "D block",
    "plan": [
-    570.0,
-    2733.0
+    1109.6,
+    2852.5
    ],
    "type": "street",
-   "heading": 0,
    "tour": {
-    "media": null
+    "name": "D block (3)"
    },
-   "placeholder": true
+   "mapAngle": 116.3
   },
   {
-   "id": "test_002",
-   "title": "150 ft Road \u00b7 point 2",
+   "id": "tour_a_block_mosque_1",
+   "title": "A Block Mosque",
    "plan": [
-    630.7,
-    2733.0
+    1508.2,
+    2105.4
    ],
    "type": "street",
-   "heading": 0,
    "tour": {
-    "media": null
+    "name": "A Block Mosque"
    },
-   "placeholder": true
+   "mapAngle": 114.71
   },
   {
-   "id": "test_003",
-   "title": "150 ft Road \u00b7 point 3",
+   "id": "tour_gate_1_main_entrance_2",
+   "title": "Gate 1 Main Entrance",
    "plan": [
-    691.4,
-    2733.0
+    241.8,
+    2475.2
    ],
    "type": "street",
-   "heading": 0,
    "tour": {
-    "media": null
+    "name": "Gate 1 Main Entrance"
    },
-   "placeholder": true
+   "mapAngle": 110.08
   },
   {
-   "id": "test_004",
-   "title": "150 ft Road \u00b7 point 4",
+   "id": "tour_bb_block_2_3",
+   "title": "BB Block",
    "plan": [
-    752.1,
-    2733.0
+    359.1,
+    2859.9
    ],
    "type": "street",
-   "heading": 0,
    "tour": {
-    "media": null
+    "name": "BB Block (2)"
    },
-   "placeholder": true
+   "mapAngle": 130.48
   },
   {
-   "id": "test_005",
-   "title": "150 ft Road \u00b7 point 5",
+   "id": "tour_a1_orphanage_4",
+   "title": "A1 Orphanage",
    "plan": [
-    812.9,
-    2733.0
+    1721.1,
+    2330.1
    ],
    "type": "street",
-   "heading": 0,
    "tour": {
-    "media": null
+    "name": "A1 Orphanage"
    },
-   "placeholder": true
+   "mapAngle": 38.99
   },
   {
-   "id": "test_006",
-   "title": "150 ft Road \u00b7 point 6",
+   "id": "tour_c_block_3_5",
+   "title": "C Block",
    "plan": [
-    873.6,
-    2733.0
+    891.5,
+    2949.1
    ],
    "type": "street",
-   "heading": 0,
    "tour": {
-    "media": null
+    "name": "C Block (3)"
    },
-   "placeholder": true
+   "mapAngle": 112.78
   },
   {
-   "id": "test_007",
-   "title": "150 ft Road \u00b7 point 7",
+   "id": "tour_hospital_college_6",
+   "title": "Hospital & College",
    "plan": [
-    934.3,
-    2733.0
+    875.9,
+    2021.6
    ],
    "type": "street",
-   "heading": 0,
    "tour": {
-    "media": null
+    "name": "Hospital & College"
    },
-   "placeholder": true
+   "mapAngle": 74.65
   },
   {
-   "id": "test_008",
-   "title": "150 ft Road \u00b7 point 8",
+   "id": "tour_e_block_7",
+   "title": "E Block",
    "plan": [
-    995.0,
-    2733.0
+    1233.1,
+    2863.7
    ],
    "type": "street",
-   "heading": 0,
    "tour": {
-    "media": null
+    "name": "E Block"
    },
-   "placeholder": true
+   "mapAngle": 196.43
   },
   {
-   "id": "test_009",
-   "title": "150 ft Road \u00b7 point 9",
+   "id": "tour_a1_block_park_8",
+   "title": "A1 Block Park",
    "plan": [
-    1055.7,
-    2733.0
+    1686.4,
+    2205.3
    ],
    "type": "street",
-   "heading": 0,
    "tour": {
-    "media": null
+    "name": "A1 Block Park"
    },
-   "placeholder": true
+   "mapAngle": 121.39
   },
   {
-   "id": "test_010",
-   "title": "150 ft Road \u00b7 point 10",
+   "id": "tour_j_block_2_9",
+   "title": "J Block",
    "plan": [
-    1116.4,
-    2733.0
+    1399.4,
+    2813.2
    ],
    "type": "street",
-   "heading": 0,
    "tour": {
-    "media": null
+    "name": "J Block (2)"
    },
-   "placeholder": true
+   "mapAngle": 147.38
   },
   {
-   "id": "test_011",
-   "title": "150 ft Road \u00b7 point 11",
+   "id": "tour_h_block_10",
+   "title": "H Block",
    "plan": [
-    1177.1,
-    2733.0
+    1051.1,
+    2721.9
    ],
    "type": "street",
-   "heading": 0,
    "tour": {
-    "media": null
+    "name": "H Block"
    },
-   "placeholder": true
+   "mapAngle": 107.79
   },
   {
-   "id": "test_012",
-   "title": "150 ft Road \u00b7 point 12",
+   "id": "tour_miyawaki_forest_11",
+   "title": "Miyawaki Forest",
    "plan": [
-    1237.9,
-    2733.0
+    1324.9,
+    2772.8
    ],
    "type": "street",
-   "heading": 0,
    "tour": {
-    "media": null
+    "name": "Miyawaki Forest"
    },
-   "placeholder": true
+   "mapAngle": 120.38
   },
   {
-   "id": "test_013",
-   "title": "150 ft Road \u00b7 point 13",
+   "id": "tour_hunza_road_12",
+   "title": "Hunza Road",
    "plan": [
-    1298.6,
-    2733.0
+    1597.0,
+    2152.7
    ],
    "type": "street",
-   "heading": 0,
    "tour": {
-    "media": null
+    "name": "Hunza Road"
    },
-   "placeholder": true
+   "mapAngle": 118.61
   },
   {
-   "id": "test_014",
-   "title": "150 ft Road \u00b7 point 14",
+   "id": "tour_main_boulevards_2_13",
+   "title": "Main Boulevards",
    "plan": [
-    1359.3,
-    2733.0
+    589.4,
+    2006.8
    ],
    "type": "street",
-   "heading": 0,
    "tour": {
-    "media": null
+    "name": "Main Boulevards (2)"
    },
-   "placeholder": true
+   "mapAngle": 106.38
   },
   {
-   "id": "test_015",
-   "title": "150 ft Road \u00b7 point 15",
+   "id": "tour_a_block_14",
+   "title": "A block",
    "plan": [
-    1420.0,
-    2733.0
+    539.7,
+    2538.5
    ],
    "type": "street",
-   "heading": 0,
    "tour": {
-    "media": null
+    "name": "A block"
    },
-   "placeholder": true
+   "mapAngle": 172.55
   },
   {
-   "id": "test_016",
-   "title": "80 ft Road \u00b7 point 1",
+   "id": "tour_b_block_2_15",
+   "title": "B Block",
    "plan": [
-    650.0,
-    2905.0
+    502.6,
+    2812.3
    ],
    "type": "street",
-   "heading": 0,
    "tour": {
-    "media": null
+    "name": "B Block (2)"
    },
-   "placeholder": true
+   "mapAngle": 113.4
   },
   {
-   "id": "test_017",
-   "title": "80 ft Road \u00b7 point 2",
+   "id": "tour_d_block_commercial_central_avenue_16",
+   "title": "D Block Commercial Central Avenue",
    "plan": [
-    712.5,
-    2905.0
+    555.0,
+    2722.8
    ],
    "type": "street",
-   "heading": 0,
    "tour": {
-    "media": null
+    "name": "D Block Commercial Central Avenue"
    },
-   "placeholder": true
+   "mapAngle": 119.03
   },
   {
-   "id": "test_018",
-   "title": "80 ft Road \u00b7 point 3",
+   "id": "tour_main_boulevards_1_17",
+   "title": "Main Boulevards",
    "plan": [
-    775.0,
-    2905.0
+    371.2,
+    2537.1
    ],
    "type": "street",
-   "heading": 0,
    "tour": {
-    "media": null
+    "name": "Main Boulevards (1)"
    },
-   "placeholder": true
+   "mapAngle": 115.97
   },
   {
-   "id": "test_019",
-   "title": "80 ft Road \u00b7 point 4",
+   "id": "tour_f_block_18",
+   "title": "F Block",
    "plan": [
-    837.5,
-    2905.0
+    851.3,
+    2617.3
    ],
    "type": "street",
-   "heading": 0,
    "tour": {
-    "media": null
+    "name": "F Block"
    },
-   "placeholder": true
+   "mapAngle": 198.54
   },
   {
-   "id": "test_020",
-   "title": "80 ft Road \u00b7 point 5",
+   "id": "tour_main_park_3_19",
+   "title": "Main Park",
    "plan": [
-    900.0,
-    2905.0
+    485.3,
+    2593.6
    ],
    "type": "street",
-   "heading": 0,
    "tour": {
-    "media": null
+    "name": "Main Park (3)"
    },
-   "placeholder": true
+   "mapAngle": 110.81
   },
   {
-   "id": "test_021",
-   "title": "80 ft Road \u00b7 point 6",
+   "id": "tour_a1_block_120_ft_road_20",
+   "title": "A1 Block 120 ft Road",
    "plan": [
-    962.5,
-    2905.0
+    1363.6,
+    2114.5
    ],
    "type": "street",
-   "heading": 0,
    "tour": {
-    "media": null
+    "name": "A1 Block 120 ft Road"
    },
-   "placeholder": true
+   "mapAngle": 111.96
   },
   {
-   "id": "test_022",
-   "title": "80 ft Road \u00b7 point 7",
+   "id": "tour_block_g_21",
+   "title": "G Block",
    "plan": [
-    1025.0,
-    2905.0
+    682.2,
+    2461.3
    ],
    "type": "street",
-   "heading": 0,
    "tour": {
-    "media": null
+    "name": "Block G"
    },
-   "placeholder": true
+   "mapAngle": -247.42
   },
   {
-   "id": "test_023",
-   "title": "80 ft Road \u00b7 point 8",
+   "id": "tour_miyawaki_forest_2_22",
+   "title": "Miyawaki Forest 2",
    "plan": [
-    1087.5,
-    2905.0
+    1604.9,
+    2405.7
    ],
    "type": "street",
-   "heading": 0,
    "tour": {
-    "media": null
+    "name": "Miyawaki Forest 2"
    },
-   "placeholder": true
+   "mapAngle": 125.11
   },
   {
-   "id": "test_024",
-   "title": "80 ft Road \u00b7 point 9",
+   "id": "tour_graveyard_23",
+   "title": "Graveyard",
    "plan": [
-    1150.0,
-    2905.0
+    1322.8,
+    2878.4
    ],
    "type": "street",
-   "heading": 0,
    "tour": {
-    "media": null
+    "name": "Graveyard"
    },
-   "placeholder": true
+   "mapAngle": 123.69
   },
   {
-   "id": "test_025",
-   "title": "120 ft Road \u00b7 point 1",
+   "id": "tour_a1_block_2_24",
+   "title": "A1 Block",
    "plan": [
-    1060.0,
-    2160.0
+    1597.0,
+    2152.7
    ],
    "type": "street",
-   "heading": 0,
    "tour": {
-    "media": null
+    "name": "A1 Block (2)"
    },
-   "placeholder": true
+   "mapAngle": 118.61
   },
   {
-   "id": "test_026",
-   "title": "120 ft Road \u00b7 point 2",
+   "id": "tour_a_block_25",
+   "title": "A Block",
    "plan": [
-    1125.0,
-    2159.2
+    571.4,
+    2378.9
    ],
    "type": "street",
-   "heading": 0,
    "tour": {
-    "media": null
+    "name": "A Block (_)"
    },
-   "placeholder": true
+   "mapAngle": 78.01
   },
   {
-   "id": "test_027",
-   "title": "120 ft Road \u00b7 point 3",
+   "id": "tour_d_block_commercial_central_avenue_26",
+   "title": "D Block Commercial Central Avenue",
    "plan": [
-    1190.0,
-    2158.3
+    640.9,
+    2725.1
    ],
    "type": "street",
-   "heading": 0,
    "tour": {
-    "media": null
+    "name": "D Block Commercial Central Avenue"
    },
-   "placeholder": true
-  },
-  {
-   "id": "test_028",
-   "title": "120 ft Road \u00b7 point 4",
-   "plan": [
-    1255.0,
-    2157.5
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_029",
-   "title": "120 ft Road \u00b7 point 5",
-   "plan": [
-    1320.0,
-    2156.7
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_030",
-   "title": "120 ft Road \u00b7 point 6",
-   "plan": [
-    1385.0,
-    2155.8
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_031",
-   "title": "120 ft Road \u00b7 point 7",
-   "plan": [
-    1450.0,
-    2155.0
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_032",
-   "title": "Main Boulevard (B side) \u00b7 point 1",
-   "plan": [
-    455.0,
-    2620.0
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_033",
-   "title": "Main Boulevard (B side) \u00b7 point 2",
-   "plan": [
-    490.0,
-    2676.0
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_034",
-   "title": "Main Boulevard (B side) \u00b7 point 3",
-   "plan": [
-    525.0,
-    2732.0
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_035",
-   "title": "Main Boulevard (B side) \u00b7 point 4",
-   "plan": [
-    560.0,
-    2788.0
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_036",
-   "title": "Main Boulevard (B side) \u00b7 point 5",
-   "plan": [
-    595.0,
-    2844.0
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_037",
-   "title": "Main Boulevard (B side) \u00b7 point 6",
-   "plan": [
-    630.0,
-    2900.0
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_038",
-   "title": "Main Boulevard (A side) \u00b7 point 1",
-   "plan": [
-    470.0,
-    2600.0
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_039",
-   "title": "Main Boulevard (A side) \u00b7 point 2",
-   "plan": [
-    514.4,
-    2555.6
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_040",
-   "title": "Main Boulevard (A side) \u00b7 point 3",
-   "plan": [
-    558.9,
-    2511.1
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_041",
-   "title": "Main Boulevard (A side) \u00b7 point 4",
-   "plan": [
-    603.3,
-    2466.7
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_042",
-   "title": "Main Boulevard (A side) \u00b7 point 5",
-   "plan": [
-    647.8,
-    2422.2
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_043",
-   "title": "Main Boulevard (A side) \u00b7 point 6",
-   "plan": [
-    692.2,
-    2377.8
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_044",
-   "title": "Main Boulevard (A side) \u00b7 point 7",
-   "plan": [
-    736.7,
-    2333.3
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_045",
-   "title": "Main Boulevard (A side) \u00b7 point 8",
-   "plan": [
-    781.1,
-    2288.9
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_046",
-   "title": "Main Boulevard (A side) \u00b7 point 9",
-   "plan": [
-    825.6,
-    2244.4
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_047",
-   "title": "Main Boulevard (A side) \u00b7 point 10",
-   "plan": [
-    870.0,
-    2200.0
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_048",
-   "title": "Main Boulevard (A side) \u00b7 point 1",
-   "plan": [
-    870.0,
-    2200.0
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_049",
-   "title": "Main Boulevard (A side) \u00b7 point 2",
-   "plan": [
-    930.0,
-    2195.0
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_050",
-   "title": "Main Boulevard (A side) \u00b7 point 3",
-   "plan": [
-    990.0,
-    2190.0
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_051",
-   "title": "Main Boulevard (A side) \u00b7 point 4",
-   "plan": [
-    1050.0,
-    2185.0
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_052",
-   "title": "Hunza Road \u00b7 point 1",
-   "plan": [
-    1440.0,
-    2735.0
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_053",
-   "title": "Hunza Road \u00b7 point 2",
-   "plan": [
-    1445.6,
-    2670.0
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_054",
-   "title": "Hunza Road \u00b7 point 3",
-   "plan": [
-    1451.1,
-    2605.0
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_055",
-   "title": "Hunza Road \u00b7 point 4",
-   "plan": [
-    1456.7,
-    2540.0
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_056",
-   "title": "Hunza Road \u00b7 point 5",
-   "plan": [
-    1462.2,
-    2475.0
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_057",
-   "title": "Hunza Road \u00b7 point 6",
-   "plan": [
-    1467.8,
-    2410.0
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_058",
-   "title": "Hunza Road \u00b7 point 7",
-   "plan": [
-    1473.3,
-    2345.0
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_059",
-   "title": "Hunza Road \u00b7 point 8",
-   "plan": [
-    1478.9,
-    2280.0
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_060",
-   "title": "Hunza Road \u00b7 point 9",
-   "plan": [
-    1484.4,
-    2215.0
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
-  },
-  {
-   "id": "test_061",
-   "title": "Hunza Road \u00b7 point 10",
-   "plan": [
-    1490.0,
-    2150.0
-   ],
-   "type": "street",
-   "heading": 0,
-   "tour": {
-    "media": null
-   },
-   "placeholder": true
+   "mapAngle": 118.9
   }
  ]
 }
