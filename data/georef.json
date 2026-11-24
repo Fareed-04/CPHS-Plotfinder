@@ -1,0 +1,83 @@
+{
+  "note": "Aligned 2026-11-23 on Esri World Imagery using 6 road junctions/roundabouts (fit error 2-9 m). Refine with index.html?calibrate and add more points if needed.",
+  "params": {
+    "anchorPlan": [
+      975,
+      2560
+    ],
+    "anchorLngLat": [
+      74.373503,
+      31.317066
+    ],
+    "rotationDeg": 183.36,
+    "metersPerUnit": 2.2658
+  },
+  "controlPoints": [
+    {
+      "label": "Roundabout west of theme park (mosque)",
+      "plan": [
+        461.2,
+        2579.5
+      ],
+      "lngLat": [
+        74.38568,
+        31.31608
+      ]
+    },
+    {
+      "label": "Roundabout on 100 ft Road, Block A",
+      "plan": [
+        888.3,
+        2172.2
+      ],
+      "lngLat": [
+        74.37609,
+        31.32495
+      ]
+    },
+    {
+      "label": "Roundabout Hunza Road / 120 ft Road",
+      "plan": [
+        1531.5,
+        2143.3
+      ],
+      "lngLat": [
+        74.36088,
+        31.32609
+      ]
+    },
+    {
+      "label": "Junction 150 ft Road / Hunza Road",
+      "plan": [
+        1330.5,
+        2743.3
+      ],
+      "lngLat": [
+        74.3648,
+        31.31378
+      ]
+    },
+    {
+      "label": "Roundabout 80 ft Road / Main Boulevard (Block B)",
+      "plan": [
+        630.8,
+        2877.0
+      ],
+      "lngLat": [
+        74.38121,
+        31.31025
+      ]
+    },
+    {
+      "label": "Junction on 150 ft Road (Block D/F)",
+      "plan": [
+        925.5,
+        2737.5
+      ],
+      "lngLat": [
+        74.37446,
+        31.31334
+      ]
+    }
+  ]
+}

@@ -1,0 +1,865 @@
+{
+ "version": 1,
+ "tour": {
+  "engine": "3dvista",
+  "url": "tour/index.htm",
+  "deepLink": "{url}#media={media}"
+ },
+ "help": "Each panorama needs a position: either \"lngLat\":[lng,lat] (from GPS / 3DVista map) or \"plan\":[x,y] (master-plan units). tour.media is the 3DVista media number or name to open. heading = compass bearing (deg) the panorama faces at yaw 0, used for the view cone.",
+ "panoramas": [
+  {
+   "id": "test_001",
+   "title": "150 ft Road \u00b7 point 1",
+   "plan": [
+    570.0,
+    2733.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_002",
+   "title": "150 ft Road \u00b7 point 2",
+   "plan": [
+    630.7,
+    2733.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_003",
+   "title": "150 ft Road \u00b7 point 3",
+   "plan": [
+    691.4,
+    2733.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_004",
+   "title": "150 ft Road \u00b7 point 4",
+   "plan": [
+    752.1,
+    2733.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_005",
+   "title": "150 ft Road \u00b7 point 5",
+   "plan": [
+    812.9,
+    2733.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_006",
+   "title": "150 ft Road \u00b7 point 6",
+   "plan": [
+    873.6,
+    2733.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_007",
+   "title": "150 ft Road \u00b7 point 7",
+   "plan": [
+    934.3,
+    2733.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_008",
+   "title": "150 ft Road \u00b7 point 8",
+   "plan": [
+    995.0,
+    2733.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_009",
+   "title": "150 ft Road \u00b7 point 9",
+   "plan": [
+    1055.7,
+    2733.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_010",
+   "title": "150 ft Road \u00b7 point 10",
+   "plan": [
+    1116.4,
+    2733.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_011",
+   "title": "150 ft Road \u00b7 point 11",
+   "plan": [
+    1177.1,
+    2733.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_012",
+   "title": "150 ft Road \u00b7 point 12",
+   "plan": [
+    1237.9,
+    2733.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_013",
+   "title": "150 ft Road \u00b7 point 13",
+   "plan": [
+    1298.6,
+    2733.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_014",
+   "title": "150 ft Road \u00b7 point 14",
+   "plan": [
+    1359.3,
+    2733.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_015",
+   "title": "150 ft Road \u00b7 point 15",
+   "plan": [
+    1420.0,
+    2733.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_016",
+   "title": "80 ft Road \u00b7 point 1",
+   "plan": [
+    650.0,
+    2905.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_017",
+   "title": "80 ft Road \u00b7 point 2",
+   "plan": [
+    712.5,
+    2905.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_018",
+   "title": "80 ft Road \u00b7 point 3",
+   "plan": [
+    775.0,
+    2905.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_019",
+   "title": "80 ft Road \u00b7 point 4",
+   "plan": [
+    837.5,
+    2905.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_020",
+   "title": "80 ft Road \u00b7 point 5",
+   "plan": [
+    900.0,
+    2905.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_021",
+   "title": "80 ft Road \u00b7 point 6",
+   "plan": [
+    962.5,
+    2905.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_022",
+   "title": "80 ft Road \u00b7 point 7",
+   "plan": [
+    1025.0,
+    2905.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_023",
+   "title": "80 ft Road \u00b7 point 8",
+   "plan": [
+    1087.5,
+    2905.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_024",
+   "title": "80 ft Road \u00b7 point 9",
+   "plan": [
+    1150.0,
+    2905.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_025",
+   "title": "120 ft Road \u00b7 point 1",
+   "plan": [
+    1060.0,
+    2160.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_026",
+   "title": "120 ft Road \u00b7 point 2",
+   "plan": [
+    1125.0,
+    2159.2
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_027",
+   "title": "120 ft Road \u00b7 point 3",
+   "plan": [
+    1190.0,
+    2158.3
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_028",
+   "title": "120 ft Road \u00b7 point 4",
+   "plan": [
+    1255.0,
+    2157.5
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_029",
+   "title": "120 ft Road \u00b7 point 5",
+   "plan": [
+    1320.0,
+    2156.7
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_030",
+   "title": "120 ft Road \u00b7 point 6",
+   "plan": [
+    1385.0,
+    2155.8
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_031",
+   "title": "120 ft Road \u00b7 point 7",
+   "plan": [
+    1450.0,
+    2155.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_032",
+   "title": "Main Boulevard (B side) \u00b7 point 1",
+   "plan": [
+    455.0,
+    2620.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_033",
+   "title": "Main Boulevard (B side) \u00b7 point 2",
+   "plan": [
+    490.0,
+    2676.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_034",
+   "title": "Main Boulevard (B side) \u00b7 point 3",
+   "plan": [
+    525.0,
+    2732.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_035",
+   "title": "Main Boulevard (B side) \u00b7 point 4",
+   "plan": [
+    560.0,
+    2788.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_036",
+   "title": "Main Boulevard (B side) \u00b7 point 5",
+   "plan": [
+    595.0,
+    2844.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_037",
+   "title": "Main Boulevard (B side) \u00b7 point 6",
+   "plan": [
+    630.0,
+    2900.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_038",
+   "title": "Main Boulevard (A side) \u00b7 point 1",
+   "plan": [
+    470.0,
+    2600.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_039",
+   "title": "Main Boulevard (A side) \u00b7 point 2",
+   "plan": [
+    514.4,
+    2555.6
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_040",
+   "title": "Main Boulevard (A side) \u00b7 point 3",
+   "plan": [
+    558.9,
+    2511.1
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_041",
+   "title": "Main Boulevard (A side) \u00b7 point 4",
+   "plan": [
+    603.3,
+    2466.7
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_042",
+   "title": "Main Boulevard (A side) \u00b7 point 5",
+   "plan": [
+    647.8,
+    2422.2
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_043",
+   "title": "Main Boulevard (A side) \u00b7 point 6",
+   "plan": [
+    692.2,
+    2377.8
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_044",
+   "title": "Main Boulevard (A side) \u00b7 point 7",
+   "plan": [
+    736.7,
+    2333.3
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_045",
+   "title": "Main Boulevard (A side) \u00b7 point 8",
+   "plan": [
+    781.1,
+    2288.9
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_046",
+   "title": "Main Boulevard (A side) \u00b7 point 9",
+   "plan": [
+    825.6,
+    2244.4
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_047",
+   "title": "Main Boulevard (A side) \u00b7 point 10",
+   "plan": [
+    870.0,
+    2200.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_048",
+   "title": "Main Boulevard (A side) \u00b7 point 1",
+   "plan": [
+    870.0,
+    2200.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_049",
+   "title": "Main Boulevard (A side) \u00b7 point 2",
+   "plan": [
+    930.0,
+    2195.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_050",
+   "title": "Main Boulevard (A side) \u00b7 point 3",
+   "plan": [
+    990.0,
+    2190.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_051",
+   "title": "Main Boulevard (A side) \u00b7 point 4",
+   "plan": [
+    1050.0,
+    2185.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_052",
+   "title": "Hunza Road \u00b7 point 1",
+   "plan": [
+    1440.0,
+    2735.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_053",
+   "title": "Hunza Road \u00b7 point 2",
+   "plan": [
+    1445.6,
+    2670.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_054",
+   "title": "Hunza Road \u00b7 point 3",
+   "plan": [
+    1451.1,
+    2605.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_055",
+   "title": "Hunza Road \u00b7 point 4",
+   "plan": [
+    1456.7,
+    2540.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_056",
+   "title": "Hunza Road \u00b7 point 5",
+   "plan": [
+    1462.2,
+    2475.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_057",
+   "title": "Hunza Road \u00b7 point 6",
+   "plan": [
+    1467.8,
+    2410.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_058",
+   "title": "Hunza Road \u00b7 point 7",
+   "plan": [
+    1473.3,
+    2345.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_059",
+   "title": "Hunza Road \u00b7 point 8",
+   "plan": [
+    1478.9,
+    2280.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_060",
+   "title": "Hunza Road \u00b7 point 9",
+   "plan": [
+    1484.4,
+    2215.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  },
+  {
+   "id": "test_061",
+   "title": "Hunza Road \u00b7 point 10",
+   "plan": [
+    1490.0,
+    2150.0
+   ],
+   "type": "street",
+   "heading": 0,
+   "tour": {
+    "media": null
+   },
+   "placeholder": true
+  }
+ ]
+}
