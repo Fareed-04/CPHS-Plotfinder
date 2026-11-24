@@ -30,6 +30,11 @@
     state.search = new PlotSearch(plots);
     state.overlay = overlay;
     state.tour = panoData.tour || null;
+    // use the local tour copy when it is deployed next to the page, otherwise the hosted tour
+    if (state.tour && state.tour.liveUrl && !/^https?:/.test(state.tour.url)) {
+      fetch(encodeURI(state.tour.url), { method: 'HEAD' }).then(function (r) { if (!r.ok) state.tour.url = state.tour.liveUrl; })
+        .catch(function () { state.tour.url = state.tour.liveUrl; });
+    }
     state.panoRaw = panoData.panoramas || [];
     computePanos();
 
