@@ -1,4 +1,4 @@
-# Central Park Plot Finder (v2)
+# Central Park Plot Finder (v3)
 
 A static web page: satellite map + transparent master plan overlay + forgiving plot search + 360° hotspots that open the 3DVista tour. No server code, no API keys, no paid map.
 
@@ -43,7 +43,11 @@ Open `index.html?calibrate`. Then:
 3. Each point shows its error in metres. Under 2 m is good. Skip a point that is off.
 4. **Download georef.json** and save it over `data/georef.json`.
 
-The current `georef.json` is only a rough guess, because the satellite imagery could not be checked while this was built.
+## Master plan tiles
+
+The plan is served as a tile set in `plan-tiles/{z}/{x}/{y}.webp` (zoom 11–19, about 34 MB), rendered straight from the PDF at 10 px per PDF point so plot numbers stay sharp when zoomed in. If the alignment (`data/georef.json`) changes, rebuild the tiles with `tools/tiler.py` (zoom 19) and then `tools/pyr.py 18 10` (lower zooms). Run them from a folder holding the plan PDF as `map.pdf`, `T.json` (plan-to-map transform) and an `out/` link to this project; they need Python with pypdfium2, opencv-python, numpy and Pillow. `?calibrate` uses the older single-image overlay so you can align without rebuilding.
+
+Tiles seen during a visit stay in memory (no reload when panning back), and the satellite and plan tiles around the scheme are fetched in the background a few seconds after the page opens.
 
 ## Search: what it understands
 
@@ -67,9 +71,11 @@ Each entry in `data/panoramas.json`:
 ```
 
 - Position: `lngLat` (from the camera GPS, or from the 3DVista map) or `plan` `[x, y]` in master plan units if it was placed on the plan.
-- `tour.name`: the panorama name in 3DVista. The page opens `{tour.url}#media-name=NAME` in a full-screen viewer (3DVista supports this deep link). `tour.media` (playlist number) also works.
-- `tour.url` points at the published tour in `CPHS Published File_V2/` next to `index.html`. To use the hosted copy instead, set it to `tour.liveUrl`.
-- The 27 current points were read from the tour's map (PanoramaMapLocation) and converted to plan units with a fit on 4 roundabouts (about 2–5 m). Two panoramas share the name "D Block Commercial Central Avenue", so the second one opens the first; rename one in 3DVista to fix it.
+- `tour.id`: the 3DVista panorama id (e.g. `panorama_…`). When the tour is in `CPHS Published File_V2/` next to `index.html` (same site), the page loads it hidden in the background after the map, skips its welcome screen, and switches panoramas by id, so a hotspot opens at once. Opening by id matters: the tour holds both the Jan 2026 and Sept 2026 shots under the same names, and opening by name picks the old one.
+- `tour.media`: playlist number, used only when the tour is on another site (the hosted copy at `tour.liveUrl`). Cross-site, the page cannot hide the welcome screen.
+- `tour.welcome`: which tour containers the ENTER button shows/hides. If the tour is re-published and the welcome screen comes back, read the new ids from the ENTER button in `script_general.js`.
+- The tour's portrait-orientation lock was removed by deleting `"lockedOrientation":"landscape"` from `CPHS Published File_V2/script_general.js`. Re-publishing from 3DVista brings it back unless it is switched off in the 3DVista project settings.
+- The 27 points come from the tour's map and `data/panoramas.json` is regenerated from `script_general.js`. Sept panoramas that are not placed on the tour map (Gate 2, Gate 3, D Block, Main Park, Cricket Ground - Main Park, Main Park (1)) have no map position yet.
 - Old test points are only shown with `?test`.
 
 Fastest way to fill this in: shoot with GPS on (most 360 cameras and phones record it), then a script reads the GPS from each panorama file and writes this JSON. The 3DVista map's own hotspot positions can also be read from the published tour's `script.js`.

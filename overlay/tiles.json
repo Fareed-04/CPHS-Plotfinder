@@ -311,5 +311,17 @@
     1880.0
    ]
   }
- ]
+ ],
+ "pyramid": {
+  "url": "plan-tiles/{z}/{x}/{y}.webp",
+  "minzoom": 11,
+  "maxzoom": 19,
+  "bounds": [
+   74.35274,
+   31.30232,
+   74.39427,
+   31.33181
+  ],
+  "note": "Made by tiler.py + pyr.py from CPHS MAP.pdf at 10 px per PDF point; re-run them after changing georef.json."
+ }
 }

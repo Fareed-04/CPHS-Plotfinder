@@ -51,6 +51,8 @@
       minZoom: 11,
       maxBounds: [[74.12, 31.12], [74.62, 31.62]],
       maxZoom: 21,
+      // keep every tile seen in this visit in memory, so panning back never reloads
+      maxTileCacheSize: 6000,
       attributionControl: { compact: true },
       hash: false
     });
@@ -73,6 +75,8 @@
       wireSearch();
       wireLayerControls();
       if (CALIBRATE) initCalibration();
+      setTimeout(warmCache, 2500);
+      setTimeout(preloadTour, 1500);
       var p = qs.get('plot');
       if (p) { var parts = p.split('-'); var hit = state.search.findExact(parts[0], parts.slice(1).join('-')); if (hit) selectPlot(hit, true); else { $('#q').value = p.replace('-', ' '); runSearch(); } }
     }
@@ -85,11 +89,11 @@
   /* ---------------- start view ----------------
      Standing on Ferozepur Road, looking west into Central Park (entrance, theme park, Blocks A/B/D in front).
      Override with ?view=lng,lat,zoom,bearing,pitch (calibrate mode shows the current values). */
-  var START = { center: [74.3838, 31.3142], zoom: 15.35, bearing: 245, pitch: 60 };
+  var START = { center: [74.38786, 31.31688], zoom: 16.55, bearing: 246, pitch: 68 };
   function startView() {
     var v = (qs.get('view') || '').split(',').map(Number);
     if (v.length >= 2 && v.every(isFinite)) return { center: [v[0], v[1]], zoom: v[2] || START.zoom, bearing: v[3] != null && isFinite(v[3]) ? v[3] : START.bearing, pitch: v[4] != null && isFinite(v[4]) ? v[4] : START.pitch };
-    return window.innerWidth < 720 ? Object.assign({}, START, { zoom: START.zoom - 0.9 }) : START;
+    return window.innerWidth < 720 ? Object.assign({}, START, { zoom: START.zoom - 1.1, pitch: 62 }) : START;
   }
   function goStart(anim) {
     var sv = startView();
@@ -112,7 +116,7 @@
       layers: [
         { id: 'bg', type: 'background', paint: { 'background-color': '#1b1f24' } },
         { id: 'osm', type: 'raster', source: 'osm', layout: { visibility: 'none' } },
-        { id: 'sat', type: 'raster', source: 'sat' },
+        { id: 'sat', type: 'raster', source: 'sat', paint: { 'raster-fade-duration': 0 } },
         { id: 'roads', type: 'raster', source: 'roads', layout: { visibility: 'none' }, paint: { 'raster-opacity': 0.75 } },
         { id: 'places', type: 'raster', source: 'places', layout: { visibility: 'none' }, paint: { 'raster-opacity': 0.9 } }
       ]
@@ -133,10 +137,21 @@
     // white "paper" behind the plan, used by the Master plan view so the plan reads as one printed sheet
     map.addSource('paper', { type: 'geojson', data: paperGeoJSON() });
     map.addLayer({ id: 'paper', type: 'fill', source: 'paper', layout: { visibility: 'none' }, paint: { 'fill-color': '#ffffff', 'fill-opacity': 1 } }, 'roads');
-    state.overlay.tiles.forEach(function (t, i) {
-      map.addSource('plan' + i, { type: 'image', url: 'overlay/' + t.url.replace(/^overlay\//, ''), coordinates: tileCoords(t) });
-      map.addLayer({ id: 'plan' + i, type: 'raster', source: 'plan' + i, paint: { 'raster-opacity': 0.8, 'raster-fade-duration': 0, 'raster-resampling': 'linear' } }, 'roads');
-    });
+    state.planLayers = [];
+    if (CALIBRATE || !state.overlay.pyramid) {
+      // calibration moves the plan live, so it uses the 16 stretchable images
+      state.overlay.tiles.forEach(function (t, i) {
+        map.addSource('plan' + i, { type: 'image', url: 'overlay/' + t.url.replace(/^overlay\//, ''), coordinates: tileCoords(t) });
+        map.addLayer({ id: 'plan' + i, type: 'raster', source: 'plan' + i, paint: { 'raster-opacity': 0.8, 'raster-fade-duration': 0, 'raster-resampling': 'linear' } }, 'roads');
+        state.planLayers.push('plan' + i);
+      });
+    } else {
+      // sharp master plan, pre-cut into map tiles (zoom 13-19) that line up with the satellite
+      var py = state.overlay.pyramid;
+      map.addSource('plan', { type: 'raster', tiles: [py.url], tileSize: 256, minzoom: py.minzoom, maxzoom: py.maxzoom, bounds: py.bounds });
+      map.addLayer({ id: 'plan', type: 'raster', source: 'plan', paint: { 'raster-opacity': 0.8, 'raster-fade-duration': 0, 'raster-resampling': 'linear' } }, 'roads');
+      state.planLayers.push('plan');
+    }
   }
 
   /* ---------------- focus mask: dims everything outside Central Park ---------------- */
@@ -232,7 +247,7 @@
     if (CALIBRATE) renderCalib();
   }
   function setOverlayOpacity(v) {
-    state.overlay.tiles.forEach(function (t, i) { map.setPaintProperty('plan' + i, 'raster-opacity', v); });
+    state.planLayers.forEach(function (id) { map.setPaintProperty(id, 'raster-opacity', v); });
   }
 
   /* ---------------- panoramas ---------------- */
@@ -269,23 +284,81 @@
     return state.panos.map(function (p, i) { return { p: p, i: i, d: Georef.distance(ll, p.ll) }; })
       .filter(function (x) { return x.d <= NEARBY_RADIUS; }).sort(function (a, b) { return a.d - b.d; }).slice(0, 5);
   }
-  function openPano(p) {
-    var v = $('#viewer'), body = $('#viewer-body');
-    $('#viewer-title').textContent = p.title || 'Street view';
-    body.innerHTML = '';
-    var media = p.tour && p.tour.media != null ? p.tour.media : null, name = p.tour && p.tour.name ? p.tour.name : null;
-    if (state.tour && state.tour.url && (media != null || name) && !p.placeholder) {
-      var url = name ? encodeURI(state.tour.url) + '#media-name=' + encodeURIComponent(name)
-        : (state.tour.deepLink || '{url}#media={media}').replace('{url}', state.tour.url).replace('{media}', encodeURIComponent(media));
-      var f = el('iframe'); f.src = url; f.allow = 'fullscreen; gyroscope; accelerometer; xr-spatial-tracking'; f.setAttribute('allowfullscreen', '');
-      body.appendChild(f);
-    } else {
-      body.appendChild(el('div', 'viewer-empty', '<div class="ve-icon">360°</div><h3>Panorama not connected yet</h3><p>This is a test hotspot placed along a main road. When the 3DVista tour is added, each hotspot opens its panorama here.</p><code>' + esc(p.id) + '</code>'));
-    }
-    v.hidden = false;
+  /* The 3DVista tour is loaded once, hidden, right after the map, so a hotspot opens instantly.
+     Same-origin copy (tour folder next to the page): we skip its welcome screen and switch panoramas by id.
+     Hosted copy (other site): we can only change the #media= link. */
+  var tourFrame = null, tourReady = false, tourSame = false, pendingPano = null;
+  function tourUrl() { return /^https?:/.test(state.tour.url) ? state.tour.url : encodeURI(state.tour.url); }
+  function preloadTour() {
+    if (tourFrame || !state.tour || !state.tour.url) return;
+    var f = el('iframe'); f.allow = 'fullscreen; gyroscope; accelerometer; xr-spatial-tracking'; f.setAttribute('allowfullscreen', ''); f.title = '360° tour';
+    f.src = tourUrl();
+    $('#viewer-body').appendChild(f); tourFrame = f;
+    f.addEventListener('load', function () {
+      try { tourSame = !!f.contentWindow.document; } catch (e) { tourSame = false; }
+      if (!tourSame) { tourReady = true; if (pendingPano) { var p = pendingPano; pendingPano = null; showInTour(p); } return; }
+      var tries = 0;
+      (function wait() {
+        var w = f.contentWindow, rp = null;
+        try { rp = w.tour && w.tour._getRootPlayer && w.tour._getRootPlayer(); } catch (e) { rp = null; }
+        if (rp && rp.mainPlayList) { skipWelcome(rp); tourReady = true; if (pendingPano) { var p = pendingPano; pendingPano = null; showInTour(p); } return; }
+        if (++tries < 300) setTimeout(wait, 100);
+      })();
+    });
   }
-  $('#viewer-close').addEventListener('click', function () { $('#viewer').hidden = true; $('#viewer-body').innerHTML = ''; });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !$('#viewer').hidden) $('#viewer-close').click(); });
+  function skipWelcome(rp) {
+    var w = state.tour.welcome; if (!w) return;
+    (w.show || []).forEach(function (id) { if (rp[id]) rp[id].set('visible', true); });
+    (w.hide || []).forEach(function (id) { if (rp[id]) rp[id].set('visible', false); });
+  }
+  function showInTour(p) {
+    var t = p.tour || {};
+    if (tourSame) {
+      try {
+        var rp = tourFrame.contentWindow.tour._getRootPlayer(), pl = rp.mainPlayList, media = rp[t.id];
+        var i = media ? rp.getPlayListItemIndexByMedia(pl, media) : -1;
+        if (i >= 0) { skipWelcome(rp); pl.set('selectedIndex', i); return; }
+      } catch (e) { /* fall through to the link */ }
+    }
+    var hash = t.media != null ? '#media=' + t.media : '#media-name=' + encodeURIComponent(t.name || '');
+    tourFrame.src = tourUrl() + hash;
+  }
+  function openPano(p) {
+    var v = $('#viewer');
+    $('#viewer-title').textContent = p.title || '360° view';
+    var empty = $('#viewer-body .viewer-empty'); if (empty) empty.remove();
+    if (!state.tour || !state.tour.url || p.placeholder || !p.tour) {
+      $('#viewer-body').appendChild(el('div', 'viewer-empty', '<div class="ve-icon">360°</div><h3>Panorama not connected yet</h3><p>This point has no panorama in the tour yet.</p>'));
+    } else {
+      if (!tourFrame) preloadTour();
+      if (tourReady) showInTour(p); else pendingPano = p;
+    }
+    v.classList.add('open'); v.setAttribute('aria-hidden', 'false');
+  }
+  function closePano() { var v = $('#viewer'); v.classList.remove('open'); v.setAttribute('aria-hidden', 'true'); }
+  $('#viewer-close').addEventListener('click', closePano);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && $('#viewer').classList.contains('open')) closePano(); });
+
+  /* ---------------- tile cache warm-up ----------------
+     Fetch the satellite and plan tiles around the scheme once, in the background, so the browser has them. */
+  function warmCache() {
+    var b = state.overlay.pyramid ? state.overlay.pyramid.bounds : null; if (!b) return;
+    var urls = [];
+    function tx(lng, z) { return Math.floor((lng + 180) / 360 * Math.pow(2, z)); }
+    function ty(lat, z) { var r = lat * Math.PI / 180; return Math.floor((1 - Math.log(Math.tan(r) + 1 / Math.cos(r)) / Math.PI) / 2 * Math.pow(2, z)); }
+    for (var z = 14; z <= 17; z++) {
+      for (var x = tx(b[0], z); x <= tx(b[2], z); x++) for (var y = ty(b[3], z); y <= ty(b[1], z); y++) {
+        urls.push('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/' + z + '/' + y + '/' + x);
+        urls.push(state.overlay.pyramid.url.replace('{z}', z).replace('{x}', x).replace('{y}', y));
+      }
+    }
+    var i = 0, active = 0;
+    (function next() {
+      while (active < 4 && i < urls.length) {
+        active++; var im = new Image(); im.onload = im.onerror = function () { active--; setTimeout(next, 30); }; im.src = urls[i++];
+      }
+    })();
+  }
 
   /* ---------------- selection ---------------- */
   function addSelectionLayers() {

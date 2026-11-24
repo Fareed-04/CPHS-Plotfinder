@@ -1,92 +1,40 @@
 {
- "note": "360 points from the Central Park 3DVista tour. Positions read from the tour's own map (PanoramaMapLocation) and converted to master-plan units. tour.name is the panorama name in 3DVista; the viewer opens {url}#media-name={name}. tour.url is the local copy of the published tour next to index.html; liveUrl is the hosted copy.",
+ "note": "360 points from the Central Park 3DVista tour, positions read from the tour's own map and converted to master-plan units. The viewer opens each panorama by its 3DVista id (same-origin tour) or by tour.media playlist number (hosted tour). Sep 2026 shots are used where both dates exist.",
  "tour": {
   "engine": "3dvista",
   "url": "CPHS Published File_V2/index.htm",
-  "deepLink": "{url}#media-name={name}",
-  "liveUrl": "https://tours.panoraproperties.com/Central-Park-Tour/index.htm"
+  "liveUrl": "https://tours.panoraproperties.com/Central-Park-Tour/index.htm",
+  "welcome": {
+   "note": "What the tour's ENTER VIRTUAL TOUR button does; the plot finder does it for the visitor.",
+   "show": [
+    "Container_4041C033_7558_FB6E_41CE_BFE427F3AF92",
+    "Container_DDF6B8F6_CD60_08B6_41E7_DE5C3B3780D7",
+    "Container_E9CE46B0_C8CD_2715_4196_96F6BCC1700B"
+   ],
+   "hide": [
+    "Container_1BF6C3EB_0971_DFAD_417A_E084B6D7BD84",
+    "ViewerAreaLabeled_C52D3C27_E742_BD20_41CA_87007B3BD39A"
+   ]
+  }
  },
  "panoramas": [
   {
-   "id": "tour_d_block_3_0",
-   "title": "D block",
-   "plan": [
-    1109.6,
-    2852.5
-   ],
-   "type": "street",
-   "tour": {
-    "name": "D block (3)"
-   },
-   "mapAngle": 116.3
-  },
-  {
-   "id": "tour_a_block_mosque_1",
-   "title": "A Block Mosque",
-   "plan": [
-    1508.2,
-    2105.4
-   ],
-   "type": "street",
-   "tour": {
-    "name": "A Block Mosque"
-   },
-   "mapAngle": 114.71
-  },
-  {
-   "id": "tour_gate_1_main_entrance_2",
-   "title": "Gate 1 Main Entrance",
-   "plan": [
-    241.8,
-    2475.2
-   ],
-   "type": "street",
-   "tour": {
-    "name": "Gate 1 Main Entrance"
-   },
-   "mapAngle": 110.08
-  },
-  {
-   "id": "tour_bb_block_2_3",
+   "id": "panorama_F89C3386_CE88_9914_41CF_6AFE9B78FEDD",
    "title": "BB Block",
    "plan": [
     359.1,
-    2859.9
+    2859.8
    ],
    "type": "street",
    "tour": {
-    "name": "BB Block (2)"
-   },
-   "mapAngle": 130.48
+    "id": "panorama_F89C3386_CE88_9914_41CF_6AFE9B78FEDD",
+    "name": "BB Block (2)",
+    "media": 9,
+    "shot": "Sep 2026"
+   }
   },
   {
-   "id": "tour_a1_orphanage_4",
-   "title": "A1 Orphanage",
-   "plan": [
-    1721.1,
-    2330.1
-   ],
-   "type": "street",
-   "tour": {
-    "name": "A1 Orphanage"
-   },
-   "mapAngle": 38.99
-  },
-  {
-   "id": "tour_c_block_3_5",
-   "title": "C Block",
-   "plan": [
-    891.5,
-    2949.1
-   ],
-   "type": "street",
-   "tour": {
-    "name": "C Block (3)"
-   },
-   "mapAngle": 112.78
-  },
-  {
-   "id": "tour_hospital_college_6",
+   "id": "panorama_B9A04417_AACF_E0C9_41E3_D8EBF6281BB7",
    "title": "Hospital & College",
    "plan": [
     875.9,
@@ -94,12 +42,74 @@
    ],
    "type": "street",
    "tour": {
-    "name": "Hospital & College"
-   },
-   "mapAngle": 74.65
+    "id": "panorama_B9A04417_AACF_E0C9_41E3_D8EBF6281BB7",
+    "name": "Hospital & College",
+    "media": 68,
+    "shot": ""
+   }
   },
   {
-   "id": "tour_e_block_7",
+   "id": "panorama_FB6CC3EE_CE88_F914_41E5_C013C7A18CCF",
+   "title": "A Block Mosque",
+   "plan": [
+    1508.2,
+    2105.4
+   ],
+   "type": "street",
+   "tour": {
+    "id": "panorama_FB6CC3EE_CE88_F914_41E5_C013C7A18CCF",
+    "name": "A Block Mosque",
+    "media": 5,
+    "shot": "Sep 2026"
+   }
+  },
+  {
+   "id": "panorama_8F69C71F_CE88_B934_41E4_D9616164FA8E",
+   "title": "Main Boulevards",
+   "plan": [
+    589.4,
+    2006.7
+   ],
+   "type": "street",
+   "tour": {
+    "id": "panorama_8F69C71F_CE88_B934_41E4_D9616164FA8E",
+    "name": "Main Boulevards (2)",
+    "media": 25,
+    "shot": "Sep 2026"
+   }
+  },
+  {
+   "id": "panorama_CA48E5F5_F795_400A_41EB_93E1CE86B83B",
+   "title": "D block",
+   "plan": [
+    1109.5,
+    2852.5
+   ],
+   "type": "street",
+   "tour": {
+    "id": "panorama_CA48E5F5_F795_400A_41EB_93E1CE86B83B",
+    "name": "D block (3)",
+    "media": 16,
+    "shot": "Sep 2026"
+   }
+  },
+  {
+   "id": "panorama_FBDCB58D_CE89_9914_41E5_E13652DD2F4B",
+   "title": "A1 Block 120 ft Road",
+   "plan": [
+    1363.6,
+    2114.4
+   ],
+   "type": "street",
+   "tour": {
+    "id": "panorama_FBDCB58D_CE89_9914_41E5_E13652DD2F4B",
+    "name": "A1 Block 120 ft Road",
+    "media": 6,
+    "shot": "Sep 2026"
+   }
+  },
+  {
+   "id": "panorama_4C9B5199_40E8_6218_41CE_2995046CC17E",
    "title": "E Block",
    "plan": [
     1233.1,
@@ -107,181 +117,14 @@
    ],
    "type": "street",
    "tour": {
-    "name": "E Block"
-   },
-   "mapAngle": 196.43
+    "id": "panorama_4C9B5199_40E8_6218_41CE_2995046CC17E",
+    "name": "E Block",
+    "media": 61,
+    "shot": ""
+   }
   },
   {
-   "id": "tour_a1_block_park_8",
-   "title": "A1 Block Park",
-   "plan": [
-    1686.4,
-    2205.3
-   ],
-   "type": "street",
-   "tour": {
-    "name": "A1 Block Park"
-   },
-   "mapAngle": 121.39
-  },
-  {
-   "id": "tour_j_block_2_9",
-   "title": "J Block",
-   "plan": [
-    1399.4,
-    2813.2
-   ],
-   "type": "street",
-   "tour": {
-    "name": "J Block (2)"
-   },
-   "mapAngle": 147.38
-  },
-  {
-   "id": "tour_h_block_10",
-   "title": "H Block",
-   "plan": [
-    1051.1,
-    2721.9
-   ],
-   "type": "street",
-   "tour": {
-    "name": "H Block"
-   },
-   "mapAngle": 107.79
-  },
-  {
-   "id": "tour_miyawaki_forest_11",
-   "title": "Miyawaki Forest",
-   "plan": [
-    1324.9,
-    2772.8
-   ],
-   "type": "street",
-   "tour": {
-    "name": "Miyawaki Forest"
-   },
-   "mapAngle": 120.38
-  },
-  {
-   "id": "tour_hunza_road_12",
-   "title": "Hunza Road",
-   "plan": [
-    1597.0,
-    2152.7
-   ],
-   "type": "street",
-   "tour": {
-    "name": "Hunza Road"
-   },
-   "mapAngle": 118.61
-  },
-  {
-   "id": "tour_main_boulevards_2_13",
-   "title": "Main Boulevards",
-   "plan": [
-    589.4,
-    2006.8
-   ],
-   "type": "street",
-   "tour": {
-    "name": "Main Boulevards (2)"
-   },
-   "mapAngle": 106.38
-  },
-  {
-   "id": "tour_a_block_14",
-   "title": "A block",
-   "plan": [
-    539.7,
-    2538.5
-   ],
-   "type": "street",
-   "tour": {
-    "name": "A block"
-   },
-   "mapAngle": 172.55
-  },
-  {
-   "id": "tour_b_block_2_15",
-   "title": "B Block",
-   "plan": [
-    502.6,
-    2812.3
-   ],
-   "type": "street",
-   "tour": {
-    "name": "B Block (2)"
-   },
-   "mapAngle": 113.4
-  },
-  {
-   "id": "tour_d_block_commercial_central_avenue_16",
-   "title": "D Block Commercial Central Avenue",
-   "plan": [
-    555.0,
-    2722.8
-   ],
-   "type": "street",
-   "tour": {
-    "name": "D Block Commercial Central Avenue"
-   },
-   "mapAngle": 119.03
-  },
-  {
-   "id": "tour_main_boulevards_1_17",
-   "title": "Main Boulevards",
-   "plan": [
-    371.2,
-    2537.1
-   ],
-   "type": "street",
-   "tour": {
-    "name": "Main Boulevards (1)"
-   },
-   "mapAngle": 115.97
-  },
-  {
-   "id": "tour_f_block_18",
-   "title": "F Block",
-   "plan": [
-    851.3,
-    2617.3
-   ],
-   "type": "street",
-   "tour": {
-    "name": "F Block"
-   },
-   "mapAngle": 198.54
-  },
-  {
-   "id": "tour_main_park_3_19",
-   "title": "Main Park",
-   "plan": [
-    485.3,
-    2593.6
-   ],
-   "type": "street",
-   "tour": {
-    "name": "Main Park (3)"
-   },
-   "mapAngle": 110.81
-  },
-  {
-   "id": "tour_a1_block_120_ft_road_20",
-   "title": "A1 Block 120 ft Road",
-   "plan": [
-    1363.6,
-    2114.5
-   ],
-   "type": "street",
-   "tour": {
-    "name": "A1 Block 120 ft Road"
-   },
-   "mapAngle": 111.96
-  },
-  {
-   "id": "tour_block_g_21",
+   "id": "panorama_8EAFB401_CE88_BF0C_41E6_9BF19732799F",
    "title": "G Block",
    "plan": [
     682.2,
@@ -289,64 +132,89 @@
    ],
    "type": "street",
    "tour": {
-    "name": "Block G"
-   },
-   "mapAngle": -247.42
+    "id": "panorama_8EAFB401_CE88_BF0C_41E6_9BF19732799F",
+    "name": "Block G",
+    "media": 19,
+    "shot": "Sep 2026"
+   }
   },
   {
-   "id": "tour_miyawaki_forest_2_22",
-   "title": "Miyawaki Forest 2",
+   "id": "panorama_0242BDF3_3AC8_6D29_41B0_DD38B909657F",
+   "title": "A block",
    "plan": [
-    1604.9,
-    2405.7
+    539.7,
+    2538.5
    ],
    "type": "street",
    "tour": {
-    "name": "Miyawaki Forest 2"
-   },
-   "mapAngle": 125.11
+    "id": "panorama_0242BDF3_3AC8_6D29_41B0_DD38B909657F",
+    "name": "A block",
+    "media": 87,
+    "shot": ""
+   }
   },
   {
-   "id": "tour_graveyard_23",
-   "title": "Graveyard",
+   "id": "panorama_CA73A6D8_F792_C03B_41EB_9E90A23364B3",
+   "title": "Miyawaki Forest",
    "plan": [
-    1322.8,
-    2878.4
+    1324.9,
+    2772.8
    ],
    "type": "street",
    "tour": {
-    "name": "Graveyard"
-   },
-   "mapAngle": 123.69
+    "id": "panorama_CA73A6D8_F792_C03B_41EB_9E90A23364B3",
+    "name": "Miyawaki Forest",
+    "media": 20,
+    "shot": "Sep 2026"
+   }
   },
   {
-   "id": "tour_a1_block_2_24",
-   "title": "A1 Block",
+   "id": "panorama_E8895F2C_E737_CD7B_41D6_14B8BA709E22",
+   "title": "J Block",
    "plan": [
-    1597.0,
-    2152.7
+    1399.4,
+    2813.1
    ],
    "type": "street",
    "tour": {
-    "name": "A1 Block (2)"
-   },
-   "mapAngle": 118.61
+    "id": "panorama_E8895F2C_E737_CD7B_41D6_14B8BA709E22",
+    "name": "J Block (2)",
+    "media": 70,
+    "shot": ""
+   }
   },
   {
-   "id": "tour_a_block_25",
-   "title": "A Block",
+   "id": "panorama_FBA58F24_CE88_8915_41E6_4770A135775A",
+   "title": "A1 Block Park",
    "plan": [
-    571.4,
-    2378.9
+    1686.4,
+    2205.3
    ],
    "type": "street",
    "tour": {
-    "name": "A Block (_)"
-   },
-   "mapAngle": 78.01
+    "id": "panorama_FBA58F24_CE88_8915_41E6_4770A135775A",
+    "name": "A1 Block Park",
+    "media": 7,
+    "shot": "Sep 2026"
+   }
   },
   {
-   "id": "tour_d_block_commercial_central_avenue_26",
+   "id": "panorama_4CB537E0_40E8_EE28_41CF_040D46AFAAA3",
+   "title": "A1 Orphanage",
+   "plan": [
+    1721.1,
+    2330.1
+   ],
+   "type": "street",
+   "tour": {
+    "id": "panorama_4CB537E0_40E8_EE28_41CF_040D46AFAAA3",
+    "name": "A1 Orphanage",
+    "media": 48,
+    "shot": ""
+   }
+  },
+  {
+   "id": "panorama_FBA0102C_CE98_9715_4178_E2945DB9DDD2",
    "title": "D Block Commercial Central Avenue",
    "plan": [
     640.9,
@@ -354,9 +222,206 @@
    ],
    "type": "street",
    "tour": {
-    "name": "D Block Commercial Central Avenue"
-   },
-   "mapAngle": 118.9
+    "id": "panorama_FBA0102C_CE98_9715_4178_E2945DB9DDD2",
+    "name": "D Block Commercial Central Avenue",
+    "media": 17,
+    "shot": "Sep 2026"
+   }
+  },
+  {
+   "id": "panorama_8F6AF8EF_CE98_9713_41E0_2A2FCE7C94D6",
+   "title": "Main Boulevards",
+   "plan": [
+    371.1,
+    2537.1
+   ],
+   "type": "street",
+   "tour": {
+    "id": "panorama_8F6AF8EF_CE98_9713_41E0_2A2FCE7C94D6",
+    "name": "Main Boulevards (1)",
+    "media": 4,
+    "shot": "Sep 2026"
+   }
+  },
+  {
+   "id": "panorama_0DEA9320_3AC8_D527_41BE_D425F86CCA68",
+   "title": "A1 Block",
+   "plan": [
+    1597.0,
+    2152.7
+   ],
+   "type": "street",
+   "tour": {
+    "id": "panorama_0DEA9320_3AC8_D527_41BE_D425F86CCA68",
+    "name": "A1 Block (2)",
+    "media": 88,
+    "shot": ""
+   }
+  },
+  {
+   "id": "panorama_C9235CD6_D987_B9C7_41DA_F3CBA7C5ACD0",
+   "title": "Miyawaki Forest 2",
+   "plan": [
+    1604.9,
+    2405.7
+   ],
+   "type": "street",
+   "tour": {
+    "id": "panorama_C9235CD6_D987_B9C7_41DA_F3CBA7C5ACD0",
+    "name": "Miyawaki Forest 2",
+    "media": 26,
+    "shot": ""
+   }
+  },
+  {
+   "id": "panorama_823A0D58_E97F_BF60_41C9_81DD75049C27",
+   "title": "Main Park",
+   "plan": [
+    485.3,
+    2593.5
+   ],
+   "type": "street",
+   "tour": {
+    "id": "panorama_823A0D58_E97F_BF60_41C9_81DD75049C27",
+    "name": "Main Park (3)",
+    "media": 24,
+    "shot": "Sep 2026"
+   }
+  },
+  {
+   "id": "panorama_CAE24CED_F796_C01A_41D6_ED89E738D9D5",
+   "title": "H Block",
+   "plan": [
+    1051.1,
+    2721.9
+   ],
+   "type": "street",
+   "tour": {
+    "id": "panorama_CAE24CED_F796_C01A_41D6_ED89E738D9D5",
+    "name": "H Block",
+    "media": 21,
+    "shot": "Sep 2026"
+   }
+  },
+  {
+   "id": "panorama_F63FF71E_E725_F987_41EB_C2A991A30111",
+   "title": "Hunza Road",
+   "plan": [
+    1597.0,
+    2152.7
+   ],
+   "type": "street",
+   "tour": {
+    "id": "panorama_F63FF71E_E725_F987_41EB_C2A991A30111",
+    "name": "Hunza Road",
+    "media": 49,
+    "shot": ""
+   }
+  },
+  {
+   "id": "panorama_F6E53E48_CE89_8B1C_41DA_E1659AFF8E5B",
+   "title": "C Block",
+   "plan": [
+    891.5,
+    2949.1
+   ],
+   "type": "street",
+   "tour": {
+    "id": "panorama_F6E53E48_CE89_8B1C_41DA_E1659AFF8E5B",
+    "name": "C Block (3)",
+    "media": 12,
+    "shot": "Sep 2026"
+   }
+  },
+  {
+   "id": "panorama_0C174F56_3AF8_2D6B_41A4_DF68D6F5744F",
+   "title": "Gate 1 Main Entrance",
+   "plan": [
+    241.8,
+    2475.2
+   ],
+   "type": "street",
+   "tour": {
+    "id": "panorama_0C174F56_3AF8_2D6B_41A4_DF68D6F5744F",
+    "name": "Gate 1 Main Entrance",
+    "media": 1,
+    "shot": "Sep 2026"
+   }
+  },
+  {
+   "id": "panorama_C923630E_D987_4847_41C9_9E45A6EB60A0",
+   "title": "D Block Commercial Central Avenue",
+   "plan": [
+    555.0,
+    2722.8
+   ],
+   "type": "street",
+   "tour": {
+    "id": "panorama_C923630E_D987_4847_41C9_9E45A6EB60A0",
+    "name": "D Block Commercial Central Avenue",
+    "media": 18,
+    "shot": ""
+   }
+  },
+  {
+   "id": "panorama_DFC321E6_EC0E_65C5_41DB_A81FC9100F5F",
+   "title": "Graveyard",
+   "plan": [
+    1322.8,
+    2878.3
+   ],
+   "type": "street",
+   "tour": {
+    "id": "panorama_DFC321E6_EC0E_65C5_41DB_A81FC9100F5F",
+    "name": "Graveyard",
+    "media": 85,
+    "shot": ""
+   }
+  },
+  {
+   "id": "panorama_4C72EAA2_40E8_2628_41C9_237208B66A06",
+   "title": "A Block",
+   "plan": [
+    571.4,
+    2378.8
+   ],
+   "type": "street",
+   "tour": {
+    "id": "panorama_4C72EAA2_40E8_2628_41C9_237208B66A06",
+    "name": "A Block (_)",
+    "media": 42,
+    "shot": ""
+   }
+  },
+  {
+   "id": "panorama_F62DDA62_E723_6BBC_41D1_03AB9939A033",
+   "title": "F Block",
+   "plan": [
+    851.3,
+    2617.3
+   ],
+   "type": "street",
+   "tour": {
+    "id": "panorama_F62DDA62_E723_6BBC_41D1_03AB9939A033",
+    "name": "F Block",
+    "media": 62,
+    "shot": ""
+   }
+  },
+  {
+   "id": "panorama_FAE53967_CE87_8914_41E7_950A42B5EC49",
+   "title": "B Block",
+   "plan": [
+    502.6,
+    2812.3
+   ],
+   "type": "street",
+   "tour": {
+    "id": "panorama_FAE53967_CE87_8914_41E7_950A42B5EC49",
+    "name": "B Block (2)",
+    "media": 8,
+    "shot": "Sep 2026"
+   }
   }
  ]
 }
