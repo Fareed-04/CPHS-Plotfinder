@@ -1,0 +1,48 @@
+@font-face {
+   font-family: "Open Sans";
+   src: url("fonts/Open Sans Bold.woff2") format("woff2");
+   font-weight: bold;
+   font-style: normal;
+}
+@font-face {
+   font-family: "Oswald";
+   src: url("fonts/Oswald-Regular.woff2") format("woff2");
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: "Segoe UI Bold";
+   src: url("fonts/Segoe UI Bold.woff2") format("woff2");
+   font-weight: bold;
+   font-style: normal;
+}
+@font-face {
+   font-family: "Roboto";
+   src: url("fonts/Roboto Bold.woff2") format("woff2");
+   font-weight: bold;
+   font-style: normal;
+}
+@font-face {
+   font-family: "Oswald";
+   src: url("fonts/Oswald BoldItalic.woff2") format("woff2");
+   font-weight: bold;
+   font-style: italic;
+}
+@font-face {
+   font-family: "Roboto SemiBold";
+   src: url("fonts/Roboto SemiBold.woff2") format("woff2");
+   font-weight: bold;
+   font-style: normal;
+}
+@font-face {
+   font-family: "Roboto Black";
+   src: url("fonts/Roboto Black.woff2") format("woff2");
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: "Roboto ExtraBold";
+   src: url("fonts/Roboto ExtraBold.woff2") format("woff2");
+   font-weight: bold;
+   font-style: normal;
+}
